@@ -15,11 +15,17 @@
         <input type="number" id="n1" placeholder="Número 1">
         <input type="number" id="n2" placeholder="Número 2">
         <input type="number" id="n3" placeholder="Número 3">
-        <button>Calcular promedio</button>
+        <button onclick="calcularPromedio()">Calcular promedio</button>
         <p id="salida"></p>        
     </div>
     <script>
-       
+        function calcularPromedio() {
+            let num1 = parseFloat(document.getElementById("n1").value);
+            let num2 = parseFloat(document.getElementById("n2").value);
+            let num3 = parseFloat(document.getElementById("n3").value);
+            let promedio = (num1 + num2 + num3) / 3;
+            document.getElementById("salida").innerText = 'El promedio es: ' + promedio.toFixed(2);
+        }
       </script>    
     
 </body>
