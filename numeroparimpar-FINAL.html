@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con if else</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .container {max-width: 50%;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Número es par/impar | Setencias de control</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número" class="form-control">
+    <hr>
+    <button onclick="verificarParImpar()" class="btn btn-info">Verificar Par o Impar</button>
+    <hr>
+    <p id="resultado"></p>
+</div>
+    <script>
+        function verificarParImpar() {
+            let numero = document.getElementById('numero').value;
+            let resultado = document.getElementById('resultado');
+//sentencia de control logica si xxx y sino xxxx
+            if (numero % 2 === 0) {
+                resultado.innerText = "El número es par.";
+            } else {
+                resultado.innerText = "El número es impar.";
+            }
+        }
+    </script>
+</body>
+</html>

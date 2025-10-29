@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Restar Dos Números</title>
+ 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container bg-light mt-2 p-4">
+            <h1>Cómo restar dos números</h1>
+        <p>Vamos a programar una función que permita sumar 2 Números</p>
+        <hr>
+<p>Introducir primer número <input type="number" id="num1" name="num1" required></p>
+<p>Introducir segundo número <input type="number" id="num2" name="num2" required></p>
+<button type="button" class="btn btn-info" onclick="restar()">RESTAR</button>
+<div>
+    <hr>
+    <p id="resultadoresta"></p>
+</div>
+        </div>
+<script>
+    //declaracion de una funcion que realiza una accion
+function restar() {
+    //ENTRADA DATOS
+    //NUM1 Y NUM2 ESTAN DECLARADO COMO TIPO NUMBER NO HAY QUE VALIDAR QUE SEA UN NUMERO
+    let num1 =parseFloat(document.getElementById("num1").value);
+    let num2 =parseFloat(document.getElementById("num2").value);
+    let resultado; // DECLARACION UNA VARIABLE
+    //PROCESAR DATOS REALIZAR LA ACCION NECESARIA
+    resultado=  num1-num2; //almacenar el resultado de la resta en la variable
+    //SALIDA DATOS
+    document.getElementById("resultadoresta").textContent = resultado;
+}
+ 
+ 
+ 
+ 
+</script>      
+    </body>
+</html>
